@@ -22,3 +22,4 @@ Contents
 
    usage
    api
+   notebooks/excel_x_sbml.ipynb

@@ -5,12 +5,17 @@ build:
   tools:
     python: "3.11"
 
+
 python:
   install:
     - requirements: docs/requirements.txt
+    # install project dependencies and make code available to Sphinx
+    - method: pip
+      path: .
 
 sphinx:
   configuration: docs/source/conf.py
+  fail_on_warning: true
 
 formats:
     - pdf

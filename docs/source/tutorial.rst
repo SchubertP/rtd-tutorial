@@ -7,7 +7,7 @@ jupyter notebooks
 -----------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    notebooks/excel_x_sbml
    notebooks/1_Create_iML1515_default_GECKO	

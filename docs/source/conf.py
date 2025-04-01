@@ -17,11 +17,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.imgmath',
+    'sphinx.ext.mathjax',
     'nbsphinx',
 ]
 
-#mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+# mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -40,24 +40,15 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 
-latex_elements = {
-    'passoptionstopackages': r'''
-\PassOptionsToPackage{svgnames}{xcolor}
-''',
-    'fontpkg': r'''
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
-''',
-    'preamble': r'''
-\usepackage[titles]{tocloft}
-\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-\setlength{\cftchapnumwidth}{0.75cm}
-\setlength{\cftsecindent}{\cftchapnumwidth}
-\setlength{\cftsecnumwidth}{1.25cm}
-''',
-    'sphinxsetup': 'TitleColor=DarkGoldenrod',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'printindex': r'\footnotesize\raggedright\printindex',
-}
+ -- Options for LaTeX output --------------------------------------------------
+
+latex_elements = {}
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, documentclass [howto/manual]).
+latex_documents = [('index', 'Lumache.tex', u'Lumache Documentation', 'Peter Schubert', 'manual')]
+
+# Additional stuff for the LaTeX preamble.
+latex_elements['preamble'] = r"\usepackage{amsmath}\usepackage{amsfonts}\usepackage{bm}\usepackage{morefloats}"
+
 latex_show_urls = 'footnote'

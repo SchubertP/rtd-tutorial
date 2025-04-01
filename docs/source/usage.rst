@@ -37,7 +37,15 @@ These variables are incorporated into the SBML reaction components in units of m
 
 .. math::
 
-   \text{flux} \leq \text{kcat} \cdot \text{n_AS} \cdot \text{avg_enz_sat} \cdot \frac{[P]}{\text{stoic} \cdot \text{MW}}
+       \min_{x \in R^n} f(x)
+
+subject to
+
+.. math::
+
+       g_L \leq g(x) \leq g_U
+
+       x_L \leq  x  \leq x_U
 
 
 The *flux* is expressed in mmol/gDW, *kcat* denotes the turnover number in 1/h, *stoic* signifies the number of protein copies in the catalyzing enzyme, *n_AS* indicates the number of active sites in the enzyme, *\[P]* represents the protein concentration in mg/gDW, 

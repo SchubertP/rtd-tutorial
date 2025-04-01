@@ -27,6 +27,7 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+#latex_engine = 'xelatex'
 
 # -- Options for HTML output
 

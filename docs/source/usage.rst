@@ -43,10 +43,9 @@ subject to
 
 .. math::
 
-       \text{g}_L \leq g(x) \leq g_U
+       \text{g}_L \leq \text{g(x)} \leq \text{g_U}
 
        x_L \leq  x  \leq x_U
-
 
 
 

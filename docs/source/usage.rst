@@ -32,3 +32,27 @@ For example:
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
+
+These variables are incorporated into the SBML reaction components in units of milligrams per gram of dry weight (mg/gDW). An upper bound on the total modeled protein is configured, and reaction fluxes are coupled to protein requirements according to the following general formulation:
+
+.. math::
+
+   \text{flux} ≤ \text{kcat} \cdot \text{n_AS} \cdot \text{avg_enz_sat} \cdot \frac{[P]}{\text{stoic} \cdot \text{MW}}
+
+The *flux* is expressed in mmol/gDW, *kcat* denotes the turnover number in 1/h, *stoic* signifies the number of protein copies in the catalyzing enzyme, *n_AS* indicates the number of active sites in the enzyme, *\[P]* represents the protein concentration in mg/gDW, 
+
+latex -string within `$`
+
+.. math::
+
+   $\text{flux} ≤ \text{kcat} \cdot \text{n_AS} \cdot \text{avg_enz_sat} \cdot \frac{[P]}{\text{stoic} \cdot \text{MW}}$
+
+
+No math statement
+
+$\text{flux} ≤ \text{kcat} \cdot \text{n_AS} \cdot \text{avg_enz_sat} \cdot \frac{[P]}{\text{stoic} \cdot \text{MW}}$
+
+
+
+
+

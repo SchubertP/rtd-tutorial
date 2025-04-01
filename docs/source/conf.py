@@ -17,11 +17,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
+    'sphinx.ext.imgmath',
     'nbsphinx',
 ]
 
-mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+#mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -40,7 +40,6 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 
-latex_engine = 'xelatex'
 latex_elements = {
     'passoptionstopackages': r'''
 \PassOptionsToPackage{svgnames}{xcolor}

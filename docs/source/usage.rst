@@ -43,15 +43,10 @@ subject to
 
 .. math::
 
-       g_L \leq g(x) \leq g_U
+       \text{g}_L \leq g(x) \leq g_U
 
        x_L \leq  x  \leq x_U
 
-now adding text directives
-
-.. math::
-
-   \text{CC}_{ij} = \frac{\text{stoic}_{ij} \cdot \text{MW}_i } {(\text{kcat}_{ij} \cdot \text{n_AS}_{ij} \cdot \text{avg_enz_sat})}
 
 
 

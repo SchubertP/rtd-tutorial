@@ -43,7 +43,7 @@ subject to
 
 .. math::
 
-       gxyz_L \leq g(x) \leq g_Udd
+       gxyz_L \leq grx(x) \leq gxxx_{Udd}
 
        x_L \leq  x  \leq x_U
 

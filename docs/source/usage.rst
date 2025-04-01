@@ -36,6 +36,7 @@ For example:
 These variables are incorporated into the SBML reaction components in units of milligrams per gram of dry weight (mg/gDW). An upper bound on the total modeled protein is configured, and reaction fluxes are coupled to protein requirements according to the following general formulation:
 
 .. math::
+
     \begin{aligned}
         Max~ & ~ 10 x_1 + 6 x_2 + 4 x_3 \\
         s.t.~ & ~ x_1 + x_2 + x_3 <= 100 \\
@@ -44,6 +45,11 @@ These variables are incorporated into the SBML reaction components in units of m
         ~ & ~ x_1 \geq 0, x_2 \geq 0, x_3 \geq 0
     \end{aligned}
 
+
+.. math::
+
+   \text{flux} \leq \text{kcat} \cdot \text{n_AS} \cdot \text{avg_enz_sat} 
+   \cdot \frac{[P]}{\text{stoic} \cdot \text{MW}}
 
 
 

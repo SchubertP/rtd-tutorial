@@ -40,7 +40,7 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 
- -- Options for LaTeX output --------------------------------------------------
+# -- Options for LaTeX output --------------------------------------------------
 
 latex_elements = {}
 

@@ -43,7 +43,7 @@ subject to
 
 .. math::
 
-       \text{gxyz}_L \leq \text{g(x)} \leq \text{g_Udd}
+       gxyz_L \leq g(x) \leq g_Udd
 
        x_L \leq  x  \leq x_U
 

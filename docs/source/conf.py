@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-#    'sphinx.ext.mathjax',
+    'sphinx.ext.mathjax',
     'nbsphinx',
 ]
 
@@ -42,6 +42,6 @@ epub_show_urls = 'footnote'
 
 # Additional stuff for the LaTeX preamble.
 latex_elements = {}
-#latex_elements['preamble'] = r"\usepackage{amsmath}\usepackage{amsfonts}\usepackage{bm}\usepackage{morefloats}"
+latex_elements['preamble'] = r"\usepackage{amsmath}\usepackage{amsfonts}\usepackage{bm}\usepackage{morefloats}"
 
 # latex_show_urls = 'footnote'

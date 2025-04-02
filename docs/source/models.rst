@@ -23,11 +23,9 @@ Consequently, protein mass balance constraints are incorporated, with identifier
 
 .. math::
 
-   \begin{align}
-      & C\_prot_i: \sum_j{CC_{ij} \cdot R_j} = V\_PC_i \\
-      & C\_prot\_pool: \sum_i{V\_PC_i} = V\_PC_total
-   \end{align}
-
+   C\_prot_i: \sum_j{CC_{ij} \cdot R_j} = V\_PC_i 
+   
+   C\_prot\_pool: \sum_i{V\_PC_i} = V\_PC_total
 
 
 :math:`R_j` being the flux carried by reaction j. The coupling constraints are added to the SBML reaction components as products and reactants.
@@ -62,10 +60,9 @@ Enzyme efficiency constraints for the forward :math:`C\_EF_i` and reverse :math:
 
 .. math::
 
-   \begin{aligned}
-      & C\_EF_i: R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001 \leq 0 \\
-      & C\_ER_i: - R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001  \leq 0 
-   \end{aligned}
+   C\_EF_i: R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001 \leq 0
+   
+   C\_ER_i: - R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001  \leq 0 
 
 
 The apparent catalytic constants are determined from the turnover numbers :math:`kcat_i` [:math:`s^{-1}`], the number of active sites :math:`n\_AS_i`, and the average enzyme saturation :math:`avg\_enz\_sat`, which is used for all reactions. 

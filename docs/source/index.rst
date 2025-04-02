@@ -22,6 +22,7 @@ Contents
    :maxdepth: 2
 
    usage
+   models
    api
 
 Check out the :doc:`usage` section for further information, including how to

@@ -1,5 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
 
+import sys
+import os
+
 # -- Project information
 
 project = 'Lumache'
@@ -8,6 +11,9 @@ author = 'Graziella'
 
 release = '0.1'
 version = '0.1.0'
+
+# patch the Sphinx run to directly run from the sources
+sys.path.insert(0, os.path.abspath('../..'))
 
 # -- General configuration
 

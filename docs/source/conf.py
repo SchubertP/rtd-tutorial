@@ -7,10 +7,10 @@ import os
 
 project = 'Lumache'
 copyright = '2021, Graziella'
-author = 'Graziellax'
+author = 'Graziellax3'
 
-release = '0.2.2'
-version = '0.2.2'
+release = '0.2.3'
+version = '0.2.3'
 
 # patch the Sphinx run to directly run from the sources
 sys.path.insert(0, os.path.abspath('../..'))

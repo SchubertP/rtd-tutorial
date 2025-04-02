@@ -39,7 +39,7 @@ epub_show_urls = 'footnote'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [('index', 'Lumache.tex', u'Lumache Documentation', 'Peter Schubert', 'manual')]
+# latex_documents = [('index', 'Lumache.tex', u'Lumache Documentation', 'Peter Schubert', 'manual')]
 
 # Additional stuff for the LaTeX preamble.
 latex_elements = {}

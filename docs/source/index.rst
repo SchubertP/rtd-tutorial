@@ -22,7 +22,6 @@ Contents
    :maxdepth: 2
 
    usage
-   models
    api
    tutorial
 

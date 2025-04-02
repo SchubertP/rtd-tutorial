@@ -18,7 +18,6 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration
 
 extensions = [
-    'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
@@ -29,7 +28,7 @@ extensions = [
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'alabaster'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

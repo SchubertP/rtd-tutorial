@@ -23,11 +23,12 @@ Consequently, protein mass balance constraints are incorporated, with identifier
 
 .. math::
 
-   C\_prot_i:   \sum_j{CC_{ij} \cdot R_j} = V\_PC_i
+   \begin{align}
+      & C\_prot_i: \sum_j{CC_{ij} \cdot R_j} = V\_PC_i \\
+      & C\_prot\_pool: \sum_i{V\_PC_i} = V\_PC_total
+   \end{align}
 
-.. math::
 
-   C\_prot\_pool: \sum_i{V\_PC_i} = V\_PC_total
 
 :math:`R_j` being the flux carried by reaction j. The coupling constraints are added to the SBML reaction components as products and reactants.
 
@@ -61,15 +62,17 @@ Enzyme efficiency constraints for the forward :math:`C\_EF_i` and reverse :math:
 
 .. math::
 
-  C\_EF_i: R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001 \leq 0 
+   \begin{aligned}
+      & C\_EF_i: R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001 \leq 0 \\
+      & C\_ER_i: - R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001  \leq 0 
+   \end{aligned}
 
-  C\_ER_i: - R_i - kcat\_app_i \cdot V\_EC_i \cdot 0.001  \leq 0 
 
 The apparent catalytic constants are determined from the turnover numbers :math:`kcat_i` [:math:`s^{-1}`], the number of active sites :math:`n\_AS_i`, and the average enzyme saturation :math:`avg\_enz\_sat`, which is used for all reactions. 
 
 .. math::
 
-  kcat\_app_i = kcat_i \cdot n\_AS_i  \cdot avg\_enz\_sat  \cdot 3600
+   kcat\_app_i = kcat_i \cdot n\_AS_i  \cdot avg\_enz\_sat  \cdot 3600
 
 Macromolecular production reactions are incorporated to synthesize explicitly modeled proteins (e.g., ``R_PROD_b2907``), balance dummy proteins (e.g., ``R_PROD_dummy_protein_im``), and total DNA (``R_PROD_dna``), total mRNA (``R_PROD_mrna``), individual tRNAs (e.g., ``R_PROD_trnaala``) and individual rRNAs (e.g., ``R_PROD_rRNA_16S``), using metabolites produced in the metabolic reaction network. Process machine capacity constraints (e.g., ``C_PMC_pm_translation``) couple these macromolecular production reactions to process machine concentrations (e.g., ``V_PMC_pm_translation``) in the same way as metabolic reactions are coupled to enzyme requirements. Macromolecular degradation reactions are added in a similar way (e.g., ``R_DEGR_mrna``).
 
@@ -153,13 +156,14 @@ The binding polynomial, denoted by :math:`P(I)`, which accounts for the energy c
 
 .. math::
 
-  P(I) = 1 + \frac {[H^+]} {K_1} + \frac {[H^+]^2} {K_1 \cdot K_2} + \dotsb
+   P(I) = 1 + \frac {[H^+]} {K_1} + \frac {[H^+]^2} {K_1 \cdot K_2} + \dotsb
 
 The mean number of bound hydrogens, denoted by :math:`avg\_h\_binding`, in the pseudoisomeric group can be calculated from the binding polynomial, as outlined in equation 1.3-9 [2]_.
 
 .. math::
 
-  avg\_h\_binding = \frac {[H+]} {P}  \frac {dP} {d[H+]} = \frac{[H+]/K_1 + 2[H+]^2/K_1K_2 + \dotsb } {P(I)}
+   avg\_h\_binding = \frac {[H+]} {P}  \frac {dP} {d[H+]} = \frac{\frac{[H+]}{K_1} + \frac{2[H+]^2}{K_1K_2} + \dotsb } {P(I)}
+
 
 
 TGECKO

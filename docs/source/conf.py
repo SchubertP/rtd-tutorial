@@ -18,7 +18,6 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration
 
 extensions = [
-    'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -43,6 +42,7 @@ epub_show_urls = 'footnote'
 latex_documents = [('index', 'Lumache.tex', u'Lumache Documentation', 'Peter Schubert', 'manual')]
 
 # Additional stuff for the LaTeX preamble.
+latex_elements = {}
 latex_elements['preamble'] = r"\usepackage{amsmath}\usepackage{amsfonts}\usepackage{bm}\usepackage{morefloats}"
 
 latex_show_urls = 'footnote'
